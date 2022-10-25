@@ -18,4 +18,5 @@ divs.forEach(div => div.addEventListener('mouseover', changeColor));
 
 function changeColor(e) {
     e.target.style.background = 'black';
+    e.target.style.borderColor = 'white';
 }

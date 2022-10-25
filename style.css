@@ -3,14 +3,29 @@
     --grid-rows: 1;
 }
 
+body {
+    background-color: rgb(26, 65, 86);
+}
+
+.flex-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container {
-    width: 320px;
+    width: 500px;
+    height: 500px;
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
 }
 
 .div {
-    border: 2px solid black;
-    padding: 20px;
+    border: 1px solid rgb(15, 240, 146);
+    border-radius: 100%;
+}
+
+.div:hover {
+    box-shadow: inset 0px 0px 8px 3px rgb(255, 255, 255);
 }
