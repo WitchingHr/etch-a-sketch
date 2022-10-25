@@ -23,9 +23,21 @@ body {
 
 .div {
     border: 1px solid rgb(15, 240, 146);
+    animation: glow 2s infinite alternate;
     border-radius: 100%;
+    
 }
 
-.div:hover {
-    box-shadow: inset 0px 0px 8px 3px rgb(255, 255, 255);
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgb(15, 240, 146);
+    }
+    to {
+        box-shadow: 0 0 -10px rgb(15, 240, 146);
+    }
 }
+
+.div-click {
+    transition: 0.5s;
+}
+
