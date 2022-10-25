@@ -8,15 +8,16 @@ function makeGrid(columns, rows) {
         const div = document.createElement('div');
         container.appendChild(div).className = 'div glow';
     }
+    addListener();
 }
 makeGrid(16,16);
 
 // Slider - grid size
 const slider = document.getElementById('myRange');
 const output = document.getElementById('value')
-output.innerHTML = slider.value;
+output.innerHTML = `${slider.value} x ${slider.value}`;
 slider.oninput = function() {
-    output.innerHTML = this.value;
+    output.innerHTML = `${slider.value} x ${slider.value}`;
     while (container.firstChild) {
         container.removeChild(container.firstChild)
     }
@@ -33,12 +34,16 @@ function removeGlow() {
     
 }
 
-// Change color of div's
-const divs = document.querySelectorAll('.div');
-divs.forEach(div => { 
+// Change color of div's on mouseover
+function addListener() {
+    const divs = document.querySelectorAll('.div');
+
+    divs.forEach(div => { 
     div.addEventListener('mouseover', changeColor)
     div.addEventListener('mouseover', removeTransition)
 });
+}
+
 
 function changeColor(e) {
     e.target.style.background = 'black';
@@ -49,6 +54,8 @@ function changeColor(e) {
 container.addEventListener('click', clearScreen);
 
 function clearScreen() {
+    const divs = document.querySelectorAll('.div');
+
     divs.forEach(div => {
         div.classList.add('div-click');
         div.style.background = 'none'
@@ -58,6 +65,7 @@ function clearScreen() {
 }
 
 function removeTransition() {
+    const divs = document.querySelectorAll('.div');
     divs.forEach(div => div.classList.remove('div-click'))
 }
 
