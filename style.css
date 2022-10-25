@@ -10,6 +10,8 @@ body {
 .flex-wrapper {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    gap: 50px;
     justify-content: center;
     align-items: center;
 }
@@ -41,3 +43,19 @@ body {
     transition: 0.5s;
 }
 
+.slider {
+    -webkit-appearance: none;
+    background: rgb(15, 240, 146);
+    border-radius: 10px;
+    height: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}

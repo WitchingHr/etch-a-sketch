@@ -9,8 +9,18 @@ function makeGrid(columns, rows) {
         container.appendChild(makeDiv).className = 'div';
     }
 }
-
 makeGrid(16,16);
+
+const slider = document.getElementById('myRange');
+const output = document.getElementById('value')
+output.innerHTML = slider.value;
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
+    makeGrid(this.value, this.value);
+}
 
 // Change border color
 container.addEventListener('mouseover', changeBorder);
@@ -19,7 +29,7 @@ function changeBorder() {
     divs.forEach(div => div.style.borderColor = 'rgb(26, 65, 86)');
 }
 
-// Change color
+// Change color of div's
 const divs = document.querySelectorAll('.div');
 divs.forEach(div => { 
     div.addEventListener('mouseover', changeColor)
