@@ -25,6 +25,13 @@ slider.oninput = function() {
     removeGlow();
 }
 
+// Slider - Div shaper
+const slider2 = document.getElementById('shaper');
+slider2.oninput = function() {
+    const divs = document.querySelectorAll('.div');
+    divs.forEach(div => div.style.borderRadius = `${this.value}%`);
+}
+
 // Remove glow
 container.addEventListener('mouseover', removeGlow);
 
