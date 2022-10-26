@@ -22,6 +22,8 @@ slider.oninput = function() {
         container.removeChild(container.firstChild)
     }
     makeGrid(this.value, this.value);
+    const divs = document.querySelectorAll('.div');
+    divs.forEach(div => div.style.borderRadius = `${slider2.value}%`);
     removeGlow();
 }
 
