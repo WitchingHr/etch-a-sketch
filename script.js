@@ -56,7 +56,8 @@ function addListener() {
 
 function changeColor(e) {
     e.target.style.background = 'black';
-    e.target.style.borderColor = 'white';
+    e.target.style.borderColor = 'black';
+    // e.target.style.borderRadius = 0;
 }
 
 // Clear screen

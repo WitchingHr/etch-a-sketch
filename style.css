@@ -6,6 +6,21 @@
 body {
     background-color: rgb(26, 65, 86);
     font-family: monospace;
+    margin: 0;
+}
+
+.header {
+    color: rgb(15, 240, 146);
+    animation: text-glow 2s infinite alternate;
+}
+
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 10px rgb(15, 240, 146);
+    }
+    to {
+        text-shadow: 0 0 -10px rgb(15, 240, 146);
+    }
 }
 
 .flex-wrapper {
@@ -22,6 +37,7 @@ body {
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
+    overflow: hidden;
 }
 
 .div {
@@ -50,6 +66,7 @@ body {
 .slide-container {
     display: flex;
     gap: 80px;
+    margin-bottom: 15px;
 }
 
 .slider {
@@ -73,4 +90,9 @@ body {
     text-align: center;
     font-size: 18px;
     color: rgb(15, 240, 146);
+}
+
+.footer {
+    color: rgb(8, 162, 98);
+    margin-top: 20px;
 }
