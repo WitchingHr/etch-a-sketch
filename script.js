@@ -68,7 +68,7 @@ function clearScreen() {
 
     divs.forEach(div => {
         div.classList.add('div-click');
-        div.style.background = 'none'
+        div.style.background = 'rgb(26, 65, 86)'
         div.style.borderColor = 'rgb(15, 240, 146)'
     });
     playSound();
